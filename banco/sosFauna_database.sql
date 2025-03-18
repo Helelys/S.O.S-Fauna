@@ -48,4 +48,18 @@ FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
 FOREIGN KEY (id_orgao) REFERENCES orgaos(id)
 );
 
+create table animais_adocao(
+id int auto_increment primary key,
+uuid varchar(100) unique not null,
+nome varchar(40),
+especie varchar(40) not null,
+idade int not null,
+sexo enum("M", "F") not null,
+foto blob,
+data_criacao datetime not null,
+status_adocao enum("disponivel", "adotado"),
+id_orgao int,
+FOREIGN KEY (id_orgao) REFERENCES orgaos(id)
+)
+
 select * from denuncias;
