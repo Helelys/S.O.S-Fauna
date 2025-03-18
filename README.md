@@ -90,6 +90,7 @@ A segurança e a privacidade dos nossos usuários são nossa prioridade. As den�
 
 #### Danielle Ferreira  
 [🔗 Linkedin](https://www.linkedin.com/in/danielle-ferreirads/) | [🐙 Github](https://github.com/DanielleFS)
+.
 
 ---
 
