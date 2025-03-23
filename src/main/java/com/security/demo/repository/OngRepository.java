@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface OngRepository extends JpaRepository<Ong, Long> {
+public interface OngRepository extends JpaRepository<Ong, String> {
     Optional<Ong> findByName(String name);
 }
