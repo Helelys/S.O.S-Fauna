@@ -1,20 +1,17 @@
 package com.security.demo.model.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @AllArgsConstructor
 public class RegistrarUsuarioDTO {
-    private String username;
-    private String password;
+    private String email;
+    private String senha;
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getSenha() {
+        return senha;
     }
 }

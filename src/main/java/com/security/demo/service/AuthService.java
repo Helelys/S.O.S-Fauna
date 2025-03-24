@@ -25,28 +25,28 @@ public class AuthService {
     }
 
     public String authenticateUser(String username, String password) {
-        Optional<User> user = userRepository.findByUsername(username);
-        if (user.isPresent() && passwordEncoder.matches(password, user.get().getPassword())) {
+        Optional<User> user = userRepository.findByEmail(username);
+        if (user.isPresent() && passwordEncoder.matches(password, user.get().getSenha())) {
             return jwtUtil.generateToken(username);
         }
         return "Invalid credentials";
     }
 
-    public String authenticateOng(String name, String password) {
-        Optional<Ong> ong = ongRepository.findByName(name);
-        if (ong.isPresent() && passwordEncoder.matches(password, ong.get().getPassword())) {
-            return jwtUtil.generateToken(name);
+    public String authenticateOng(String email, String password) {
+        Optional<Ong> ong = ongRepository.findByEmail(email);
+        if (ong.isPresent() && passwordEncoder.matches(password, ong.get().getSenha())) {
+            return jwtUtil.generateToken(email);
         }
         return "Invalid credentials";
     }
 
-    public void registerUser(String username, String password) {
-        User user = new User(null, username, passwordEncoder.encode(password));
+    public void registerUser(String email, String senha) {
+        User user = new User(null, email, passwordEncoder.encode(senha));
         userRepository.save(user);
     }
 
-    public void registerOng(String name, String password) {
-        Ong ong = new Ong(null, name, passwordEncoder.encode(password));
+    public void registerOng(String email, String senha) {
+        Ong ong = new Ong(null, email, passwordEncoder.encode(senha));
         ongRepository.save(ong);
     }
 }

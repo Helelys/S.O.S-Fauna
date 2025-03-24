@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface OngRepository extends JpaRepository<Ong, String> {
-    Optional<Ong> findByName(String name);
+    Optional<Ong> findByEmail(String email);
 }

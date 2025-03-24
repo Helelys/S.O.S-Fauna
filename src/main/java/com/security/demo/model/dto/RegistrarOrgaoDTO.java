@@ -4,15 +4,14 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class RegistrarOrgaoDTO {
+    private String email;
+    private String senha;
 
-    private String username;
-    private String password;
-
-    public String getUsername() {
-        return username;
+    public String getSenha() {
+        return senha;
     }
 
-    public String getPassword() {
-        return password;
+    public String getEmail() {
+        return email;
     }
 }
