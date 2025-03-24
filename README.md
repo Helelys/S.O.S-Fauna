@@ -21,7 +21,6 @@ A **Plataforma S.O.S Fauna** foi criada para oferecer uma solução eficiente, s
 
 ## ⚙️ Funcionalidades
 
-- **Denúncia Anônima:** Permite que os usuários façam denúncias sem a necessidade de revelar sua identidade, garantindo sigilo e proteção.
 - **Acompanhamento de Casos:** Acompanhe o progresso da sua denúncia diretamente na plataforma.
 - **Recursos de Apoio:** Fornecemos informações sobre como identificar maus-tratos e como agir para ajudar os animais.
   
