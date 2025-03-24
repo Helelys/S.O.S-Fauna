@@ -19,23 +19,23 @@ public class AuthController {
 
     @PostMapping("/register/user")
     public String registerUser(@RequestBody RegistrarUsuarioDTO body) {
-        authService.registerUser(body.getUsername(), body.getPassword());
+        authService.registerUser(body.getEmail(), body.getSenha());
         return "User registered successfully";
     }
 
     @PostMapping("/register/ong")
     public String registerOng(@RequestBody RegistrarOrgaoDTO body) {
-        authService.registerOng(body.getUsername(), body.getPassword());
+        authService.registerOng(body.getEmail(), body.getSenha());
         return "ONG registered successfully";
     }
 
     @PostMapping("/login/user")
     public String loginUser(@RequestBody LoginUsuarioDTO body) {
-        return authService.authenticateUser(body.getUsername(), body.getPassword());
+        return authService.authenticateUser(body.getEmail(), body.getSenha());
     }
 
     @PostMapping("/login/ong")
     public String loginOng(@RequestBody LoginOrgaoDTO body) {
-        return authService.authenticateOng(body.getUsername(), body.getPassword());
+        return authService.authenticateOng(body.getEmail(), body.getSenha());
     }
 }

@@ -4,47 +4,47 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "orgaos")
+@Table(name = "orgaos_login")
 public class Ong {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private String id;
+    private Long id;
 
-    @Column(name = "nome")
-    private String name;
+    @Column(name = "email")
+    private String email;
 
     @Column(name = "senha")
-    private String password;
+    private String senha;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getEmail() {
+        return email;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
-    public Ong(String id, String name, String password) {
+    public Ong(Long id, String email, String senha) {
         this.id = id;
-        this.name = name;
-        this.password = password;
+        this.email = email;
+        this.senha = senha;
     }
 
     public Ong() {

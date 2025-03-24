@@ -4,14 +4,14 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class LoginUsuarioDTO {
-    private String username;
-    private String password;
+    private String email;
+    private String senha;
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getSenha() {
+        return senha;
     }
 }
