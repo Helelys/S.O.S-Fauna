@@ -1,6 +1,7 @@
 package com.security.demo.model.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.*;
 
 @Entity
@@ -11,6 +12,7 @@ public class Ong {
     @Column(name = "id")
     private String id;
 
+    @Email
     @Column(name = "email")
     private String email;
 

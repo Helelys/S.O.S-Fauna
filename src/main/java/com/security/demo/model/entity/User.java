@@ -1,6 +1,7 @@
 package com.security.demo.model.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -14,6 +15,7 @@ public class User {
     @Column(name = "id")
     private String id;
 
+    @Email
     @Column(name = "email")
     private String email;
 
