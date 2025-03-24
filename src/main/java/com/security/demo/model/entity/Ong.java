@@ -7,9 +7,9 @@ import lombok.*;
 @Table(name = "orgaos_login")
 public class Ong {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id")
-    private Long id;
+    private String id;
 
     @Column(name = "email")
     private String email;
@@ -17,11 +17,11 @@ public class Ong {
     @Column(name = "senha")
     private String senha;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -41,7 +41,7 @@ public class Ong {
         this.senha = senha;
     }
 
-    public Ong(Long id, String email, String senha) {
+    public Ong(String id, String email, String senha) {
         this.id = id;
         this.email = email;
         this.senha = senha;
