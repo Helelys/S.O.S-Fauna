@@ -1,21 +1,24 @@
 package com.security.demo.controller;
 
-import com.security.demo.model.dto.LoginOrgaoDTO;
-import com.security.demo.model.dto.LoginUsuarioDTO;
-import com.security.demo.model.dto.RegistrarOrgaoDTO;
-import com.security.demo.model.dto.RegistrarUsuarioDTO;
+import com.security.demo.model.dto.*;
 import com.security.demo.service.AuthService;
+import com.security.demo.service.ResetSenhaService;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class AuthController {
 
     private final AuthService authService;
 
-    public AuthController(AuthService authService) {
-        this.authService = authService;
-    }
+//    public AuthController(AuthService authService) {
+//        this.authService = authService;
+//    }
 
     @PostMapping("/register/user")
     public String registerUser(@RequestBody RegistrarUsuarioDTO body) {
@@ -38,4 +41,6 @@ public class AuthController {
     public String loginOng(@RequestBody LoginOrgaoDTO body) {
         return authService.authenticateOng(body.getEmail(), body.getSenha());
     }
+
+
 }

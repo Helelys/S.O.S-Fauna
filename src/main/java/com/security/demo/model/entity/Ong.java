@@ -2,7 +2,6 @@ package com.security.demo.model.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
-import lombok.*;
 
 @Entity
 @Table(name = "orgaos_login")

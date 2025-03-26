@@ -24,10 +24,10 @@ public class AuthService {
         this.jwtUtil = jwtUtil;
     }
 
-    public String authenticateUser(String username, String password) {
-        Optional<User> user = userRepository.findByEmail(username);
+    public String authenticateUser(String email, String password) {
+        Optional<User> user = userRepository.findByEmail(email);
         if (user.isPresent() && passwordEncoder.matches(password, user.get().getSenha())) {
-            return jwtUtil.generateToken(username);
+            return jwtUtil.generateToken(email);
         }
         return "Invalid credentials";
     }
